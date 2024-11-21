@@ -16,6 +16,9 @@ const TransactionsPage = async () => {
   }
 
   const transactions = await db.transaction.findMany({
+    where: {
+      userId: userId,
+    },
     orderBy: {
       date: "desc",
     },
