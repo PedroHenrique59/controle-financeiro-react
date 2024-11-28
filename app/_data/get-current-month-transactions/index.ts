@@ -9,7 +9,7 @@ export const getCurrentMonthTransactions = async () => {
   }
   return db.transaction.count({
     where: {
-      id: userId,
+      userId: userId,
       createdAt: {
         gte: startOfMonth(new Date()),
         lt: endOfMonth(new Date()),
